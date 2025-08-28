@@ -1,0 +1,111 @@
+/* ====== Base Styles ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Navigation (Flexbox) */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #444;
+}
+
+.navbar li {
+  margin: 0.5rem 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ====== Grid Layout ====== */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* main + sidebar */
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Content */
+.content {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Cards (Flexbox) */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1;
+  background: #ddd;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #e4e4e4;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+.site-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 992px) {
+  /* Tablet */
+  .grid-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  .grid-layout {
+    grid-template-columns: 1fr; /* Stack content + sidebar */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 0.5rem 0;
+  }
+}
